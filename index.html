@@ -4,14 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAWOR - Aplikacja Sygnałowa</title>
+    <title>JAWOR - Sygnały Tradingowe</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <h1>JAWOR - Aplikacja Sygnałowa</h1>
-        <p>Wersja demo. Sygnały wkrótce się pojawią...</p>
+        <h1>JAWOR - Sygnały Tradingowe</h1>
+        <div id="signals">
+            <div class="signal">
+                <h3>US100</h3>
+                <p>Kierunek: BUY</p>
+                <p>RSI: 28.7 | EMA200: poniżej</p>
+                <p>Wolumen H1: 3,410 (↑ +19%)</p>
+                <p>SL: 243 pkt | TP: 324 pkt</p>
+            </div>
+            <div class="signal">
+                <h3>NATGAS</h3>
+                <p>Kierunek: BUY</p>
+                <p>RSI: 27.9 | Wolumen: 1,820 (↑ +24%)</p>
+                <p>SL: 0.088 | TP: 0.119</p>
+            </div>
+            <div class="signal">
+                <h3>US500</h3>
+                <p>Kierunek: SELL</p>
+                <p>RSI: 72.3 | Wolumen: 2,925 (↑ +31%)</p>
+                <p>SL: 27.3 pkt | TP: 36.4 pkt</p>
+            </div>
+        </div>
+        <p style="margin-top: 30px;">Wersja demo — dane przykładowe</p>
     </div>
     <script src="app.js"></script>
 </body>

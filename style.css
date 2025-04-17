@@ -9,7 +9,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 #app {
     text-align: center;
+}
+.signal {
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 10px;
+    background-color: #1a1a1a;
+    border-radius: 6px;
 }

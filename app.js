@@ -1,4 +1,4 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('JAWOR App loaded');
+    console.log('JAWOR Sygnały uruchomione');
 });
