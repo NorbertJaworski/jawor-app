@@ -1,0 +1,16 @@
+
+{
+    "short_name": "JAWOR",
+    "name": "JAWOR - Aplikacja Sygnałowa",
+    "icons": [
+        {
+            "src": "logo512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#0a0a0a"
+}
