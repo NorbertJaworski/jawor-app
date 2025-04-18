@@ -4,15 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAWOR - Wykres i Alerty</title>
+    <title>JAWOR - Platforma Tradingowa</title>
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <h1>JAWOR - LIVE WYKRES + ALERTY</h1>
+        <h1>JAWOR - Platforma Sygnałów i Wykresów</h1>
 
-        <div class="tv-widget">
-            <!-- TradingView Widget BEGIN -->
+        <section id="mocne-sygnaly">
+            <h2>LIVE SYGNAŁY</h2>
+            <div class="signal">
+                <h3>US100</h3>
+                <p>Kierunek: BUY</p>
+                <p>RSI: 28.7 | EMA200: poniżej</p>
+                <p>Wolumen H1: 3,410 (↑ +19%)</p>
+                <p>SL: 243 pkt | TP: 324 pkt</p>
+                <p>Skuteczność: 84%</p>
+            </div>
+            <div class="signal">
+                <h3>NATGAS</h3>
+                <p>Kierunek: BUY</p>
+                <p>RSI: 27.9 | Wolumen: 1,820 (↑ +24%)</p>
+                <p>SL: 0.088 | TP: 0.119</p>
+                <p>Skuteczność: 83%</p>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>Historia Transakcji</h2>
+            <ul>
+                <li>US100 | BUY | TP osiągnięte | +324 pkt</li>
+                <li>COCOA | SELL | SL aktywne | -62 pkt</li>
+                <li>US500 | BUY | zamknięcie ręczne | +117 pkt</li>
+            </ul>
+        </section>
+
+        <section id="tryb">
+            <h2>Tryb działania</h2>
+            <p>Aktywny tryb: <span style="color: lime;">AUTO</span></p>
+            <p>Log zleceń: <br>[AUTO] US100 BUY 0.01 | SL: 243 | TP: 324</p>
+        </section>
+
+        <section id="tv">
+            <h2>Wykres TradingView - US100</h2>
             <div class="tradingview-widget-container">
               <div id="tradingview_12345"></div>
               <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -33,15 +68,17 @@
               });
               </script>
             </div>
-            <!-- TradingView Widget END -->
-        </div>
+        </section>
 
         <section id="webhook">
-            <h2>Webhook – Sygnał z TradingView</h2>
-            <p>Endpoint webhooka dla alertów:</p>
+            <h2>Webhook z TradingView</h2>
+            <p>Użyj tego linku w alertach TradingView:</p>
             <code>https://twoj-serwer/api/tradingview</code>
-            <p>Użyj go w alertach TradingView, by przesyłać sygnały do JAWOR.</p>
         </section>
+
+        <footer>
+            <p>JAWOR – wersja rozszerzona | Wszystkie dane są przykładowe</p>
+        </footer>
     </div>
 </body>
 </html>

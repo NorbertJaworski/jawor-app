@@ -10,10 +10,10 @@ body {
     max-width: 1000px;
     margin: auto;
 }
-.tv-widget {
-    margin: 20px 0;
+.signal {
     border: 1px solid #444;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #1a1a1a;
     border-radius: 6px;
-    overflow: hidden;
 }
-    
