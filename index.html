@@ -3,16 +3,67 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>JAWOR PRO - LIVE SYGNAŁY</title>
+    <title>JAWOR PRO – Pełna wersja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <h1>JAWOR PRO – Sygnały LIVE</h1>
-        <div id="signals"></div>
-        <footer><p>Aktualizacja co 30s | Demo JSON API</p></footer>
+        <h1>JAWOR PRO – Pełna wersja</h1>
+
+        <section>
+            <h2>LIVE SYGNAŁY (dynamiczne)</h2>
+            <div id="signals"></div>
+        </section>
+
+        <section>
+            <h2>WYKRES US100 (TradingView)</h2>
+            <div class="tradingview-widget-container">
+                <div id="tradingview_widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "width": "100%",
+                        "height": 500,
+                        "symbol": "NASDAQ:NDX",
+                        "interval": "15",
+                        "timezone": "Europe/Warsaw",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "pl",
+                        "toolbar_bg": "#0d0d0d",
+                        "enable_publishing": false,
+                        "container_id": "tradingview_widget"
+                    });
+                </script>
+            </div>
+        </section>
+
+        <section>
+            <h2>TRYB DZIAŁANIA</h2>
+            <p>Aktywny tryb: <span style="color: lime;">AUTO</span></p>
+            <p>Log: [AUTO] US100 BUY 0.01 | SL: 243 | TP: 324</p>
+        </section>
+
+        <section>
+            <h2>HISTORIA TRANSAKCJI</h2>
+            <ul>
+                <li>US100 | BUY | TP osiągnięte | +324 pkt</li>
+                <li>COCOA | SELL | SL aktywne | -62 pkt</li>
+                <li>US500 | BUY | zamknięcie ręczne | +117 pkt</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>WEBHOOK Z TRADINGVIEW</h2>
+            <p>Użyj tego linku w alertach TradingView:</p>
+            <code>https://twoj-serwer/api/tradingview</code>
+        </section>
+
+        <footer><p>JAWOR – wersja PRO | Demo | LIVE co 30s</p></footer>
     </div>
+
     <script>
         async function loadSignals() {
             const res = await fetch('sygnaly.json');
