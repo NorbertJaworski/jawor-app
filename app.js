@@ -1,4 +1,1 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('JAWOR Sygnały uruchomione');
-});
+console.log('JAWOR FULL uruchomiony');

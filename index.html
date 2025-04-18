@@ -4,35 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAWOR - Sygnały Tradingowe</title>
+    <title>JAWOR - Pełna Wersja</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <h1>JAWOR - Sygnały Tradingowe</h1>
-        <div id="signals">
+        <h1>JAWOR - Platforma Sygnałów Tradingowych</h1>
+        <section id="mocne-sygnaly">
+            <h2>LIVE SYGNAŁY</h2>
             <div class="signal">
                 <h3>US100</h3>
                 <p>Kierunek: BUY</p>
                 <p>RSI: 28.7 | EMA200: poniżej</p>
                 <p>Wolumen H1: 3,410 (↑ +19%)</p>
                 <p>SL: 243 pkt | TP: 324 pkt</p>
+                <p>Skuteczność: 84%</p>
             </div>
             <div class="signal">
                 <h3>NATGAS</h3>
                 <p>Kierunek: BUY</p>
                 <p>RSI: 27.9 | Wolumen: 1,820 (↑ +24%)</p>
                 <p>SL: 0.088 | TP: 0.119</p>
+                <p>Skuteczność: 83%</p>
             </div>
             <div class="signal">
                 <h3>US500</h3>
                 <p>Kierunek: SELL</p>
                 <p>RSI: 72.3 | Wolumen: 2,925 (↑ +31%)</p>
                 <p>SL: 27.3 pkt | TP: 36.4 pkt</p>
+                <p>Skuteczność: 81%</p>
             </div>
-        </div>
-        <p style="margin-top: 30px;">Wersja demo — dane przykładowe</p>
+        </section>
+
+        <section id="historia">
+            <h2>Historia Transakcji</h2>
+            <ul>
+                <li>US100 | BUY | TP osiągnięte | +324 pkt</li>
+                <li>COCOA | SELL | SL aktywne | -62 pkt</li>
+                <li>US500 | BUY | zamknięcie ręczne | +117 pkt</li>
+            </ul>
+        </section>
+
+        <section id="tryb">
+            <h2>Tryb działania</h2>
+            <p>Aktywny tryb: <span style="color: lime;">AUTO</span></p>
+            <p>Log: <br>[AUTO] US100 BUY 0.01 | SL: 243 | TP: 324</p>
+        </section>
+
+        <footer>
+            <p>JAWOR — wersja pełna demo | Wszystkie dane są przykładowe</p>
+        </footer>
     </div>
     <script src="app.js"></script>
 </body>
