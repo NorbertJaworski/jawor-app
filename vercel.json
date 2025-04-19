@@ -1,0 +1,10 @@
+
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/tradingview.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/tradingview", "dest": "api/tradingview.js" }
+  ]
+}
